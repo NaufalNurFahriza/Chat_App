@@ -128,7 +128,13 @@
   }
   
   /* Media Content */
-  .message img, .message video {
+  .message img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .message video {
     max-width: 100%;
     border-radius: 5px;
     margin-top: 5px;
@@ -149,42 +155,20 @@
     background-color: #e8eaed;
   }
   
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .chat-container {
-      flex-direction: column;
-      height: 100vh;
-    }
-  
-    .room-list-container {
-      width: 100%;
-      height: 30vh;
-      border-right: none;
-      border-bottom: 1px solid #eee;
-    }
-  
-    .message-container {
-      width: 100%;
-      height: 70vh;
-    }
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
   }
   
-  @media screen and (max-width: 480px) {
-    .room-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
   
-    .room-image {
-      width: 40px;
-      height: 40px;
-    }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
   
-    .room-details h3 {
-      font-size: 14px;
-    }
-  
-    .room-details p {
-      font-size: 12px;
-    }
-  }  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
